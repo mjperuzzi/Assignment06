@@ -13,6 +13,7 @@ import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { PositionsComponent } from './positions/positions.component';
 import { PositionComponent } from './position/position.component';
+import { ContentComponent } from './content/content.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { PositionComponent } from './position/position.component';
     EmployeesComponent,
     EmployeeComponent,
     PositionsComponent,
-    PositionComponent
+    PositionComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
