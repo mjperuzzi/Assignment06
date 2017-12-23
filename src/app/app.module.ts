@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
+/**Component Imports */
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
@@ -15,6 +16,14 @@ import { PositionsComponent } from './positions/positions.component';
 import { PositionComponent } from './position/position.component';
 import { ContentComponent } from './content/content.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { MomentModule } from 'angular2-moment';
+
+/*Service imports*/ 
+import { PositionService } from './data/position.service';
+import { EmployeeService } from './data/employee.service'
+import { LogService } from './data/log.service';
 
 @NgModule({
   declarations: [
@@ -32,9 +41,12 @@ import { ContentComponent } from './content/content.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    MomentModule
   ],
-  providers: [],
+  providers: [PositionService, LogService, EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
